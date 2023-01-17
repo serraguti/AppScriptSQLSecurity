@@ -1,0 +1,62 @@
+﻿@model IEnumerable<AppScriptSQLSecurity.Models.TiemposEventos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Timers</h1>
+
+<a asp-controller="Timers"
+    asp-action="IncreaseTimers">
+    Incrementar Tiempo Timers
+</a>
+<hr/>
+
+<form method="post">
+    <button class="btn btn-danger" name="accion" value="restaurar">
+        Restaurar BBDD
+    </button>
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Inicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duracion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sala)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sala)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
