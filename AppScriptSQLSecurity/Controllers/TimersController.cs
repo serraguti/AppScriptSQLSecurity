@@ -4,9 +4,11 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using System.Text;
 using AppScriptSQLSecurity.Models;
+using AppScriptSQLSecurity.Filters;
 
 namespace AppScriptSQLSecurity.Controllers
 {
+    [AuthorizeUsers]
     public class TimersController : Controller
     {
         RepositoryTimers repo;
