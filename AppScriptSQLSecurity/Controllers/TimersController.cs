@@ -30,7 +30,8 @@ namespace AppScriptSQLSecurity.Controllers
         [HttpPost]
         public IActionResult Index(string accion)
         {
-            string fileName = "SoloDatosTimers.sql";
+            //string fileName = "SoloDatosTimers.sql";
+            string fileName = "SoloDatosTimersBarcelona.sql";
             string path = Path.Combine(this.Environment.WebRootPath, "files/") + fileName;
             string readContents;
             using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
